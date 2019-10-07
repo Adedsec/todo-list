@@ -16,7 +16,7 @@ class TodoEntry extends Component {
   render() {
     return (
       <header className="header">
-        <h1>Todo</h1>
+        <h1>Todo List</h1>
         <input
           onChange={event => this.setState({ value: event.target.value })}
           onKeyDown={event => this.handleKeyDown(event)}

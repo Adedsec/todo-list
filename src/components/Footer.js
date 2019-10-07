@@ -7,17 +7,26 @@ import todostore from "../stores/TodoStore";
 export default class Footer extends Component {
   render() {
     return (
-      <footer className="footer">
+      <footer className={"footer " + this.props.className}>
         <div className="todo-count">{todostore.leftcount + " items left"}</div>
         <div className="filters">
-          <li>
-            <a>active</a>
+          <li onClick={this.props.onActiveCllick}>
+            <a className={this.props.data === "active" ? "selected" : ""}>
+              active
+            </a>
+          </li>
+          <li onClick={this.props.oncompletedCllick}>
+            <a className={this.props.data === "completed" ? "selected" : ""}>
+              comleted
+            </a>
           </li>
           <li>
-            <a>comleted</a>
-          </li>
-          <li>
-            <a className="selected">all</a>
+            <a
+              className={this.props.data === "all" ? "selected" : ""}
+              onClick={this.props.onallCllick}
+            >
+              all
+            </a>
           </li>
         </div>
         <div
@@ -33,3 +42,8 @@ export default class Footer extends Component {
     );
   }
 }
+// Footer.defaultProps={
+//     onActiveCllick:
+//     oncompletedCllick:
+//     onallCllick:
+// }

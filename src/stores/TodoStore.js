@@ -5,6 +5,7 @@ class TodoStore {
   @observable todos = [];
   @observable leftcount = 0;
   @observable completedcount = 0;
+
   lastID = 0;
 
   @action
