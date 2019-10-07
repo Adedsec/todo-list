@@ -4,6 +4,7 @@ import "./App.css";
 
 import TodoEntry from "./components/TodoEntry";
 import TodoItems from "./components/TodoItems";
+import Footer from "./components/Footer";
 
 @observer
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
       <div className="todoapp" id="todoapp">
         <TodoEntry />
         <TodoItems />
+        <Footer />
       </div>
     );
   }

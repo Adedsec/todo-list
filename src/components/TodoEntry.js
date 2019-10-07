@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import TodoStore from "../stores/TodoStore";
 import todostore from "../stores/TodoStore";
 
 class TodoEntry extends Component {

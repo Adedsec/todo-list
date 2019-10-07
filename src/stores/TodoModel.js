@@ -14,6 +14,19 @@ export default class TodoModel {
   }
   @action
   toggle() {
+    if (!this.completed) {
+      this.store.leftcount--;
+    } else if (this.completed) {
+      this.store.leftcount++;
+    }
     this.completed = !this.completed;
+    this.store.completedcount = this.store.todos.length - this.store.leftcount;
+    // console.log(
+    //   "items : " +
+    //     this.store.todos.length +
+    //     "---" +
+    //     "left: " +
+    //     this.store.leftcount
+    // );
   }
 }

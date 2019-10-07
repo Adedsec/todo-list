@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { observer } from "mobx-react";
 
+import todostore from "../stores/TodoStore";
+
 @observer
 class TodoItem extends Component {
   ontoggle = () => {
@@ -19,7 +21,10 @@ class TodoItem extends Component {
             checked={todo.completed}
           />
           <label> {todo.title} </label>
-          <button className="destroy"></button>
+          <button
+            className="destroy"
+            onClick={() => todostore.deleteTodo(todo)}
+          ></button>
         </div>
       </li>
     );
