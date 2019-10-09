@@ -7,11 +7,13 @@ class TodoEntry extends Component {
     if (event.keyCode !== 13) {
       return;
     }
-    event.preventDefault();
-    todostore.addTodo(this.state.value);
-    this.setState({
-      value: ""
-    });
+    if (this.state.value.trim() !== "") {
+      event.preventDefault();
+      todostore.addTodo(this.state.value);
+      this.setState({
+        value: ""
+      });
+    }
   };
   render() {
     return (

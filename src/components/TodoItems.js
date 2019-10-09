@@ -32,7 +32,7 @@ class TodoItems extends Component {
       <section className="main">
         <ul className="todo-list">
           {todolist.map(todo => {
-            return <TodoItem todo={todo} />;
+            return <TodoItem todo={todo} key={todo.id} />;
           })}
         </ul>
       </section>

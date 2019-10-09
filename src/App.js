@@ -24,20 +24,16 @@ class App extends Component {
             this.setState({
               data: "active"
             });
-            console.log(this.state.data);
           }}
           oncompletedCllick={() => {
             this.setState({
               data: "completed"
             });
-            console.log(this.state.data);
           }}
           onallCllick={() => {
             this.setState({
               data: "all"
             });
-
-            console.log(this.state.data);
           }}
         />
       </div>
